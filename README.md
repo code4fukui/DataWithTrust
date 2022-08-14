@@ -1,6 +1,6 @@
 # TrustData
 
-信頼できるデータ連携をしよう！ (with Ed25519, X25519)
+信頼できるデータ連携をしよう！ (with [Ed25519](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%89%E3%83%AF%E3%83%BC%E3%82%BA%E6%9B%B2%E7%B7%9A%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E7%BD%B2%E5%90%8D%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0), [X25519](https://ja.wikipedia.org/wiki/Curve25519) *TLS1.3推奨技術)
 
 ## 電子署名による信頼できるデータ連携
 
