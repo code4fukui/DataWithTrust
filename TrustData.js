@@ -6,7 +6,7 @@ import { X25519 } from "https://code4fukui.github.io/X25519/X25519.js";
 import { convertPublicKey, convertSecretKey as convertPrivateKey } from "https://code4fukui.github.io/ed25519-to-x25519/src/ed2curve.js";
 
 export class TrustData {
-  static makeUser() {
+  static createUser() {
     const keys = Ed25519.generateKeyPair();
     const did = keys.publicKey;
     const secret = subbin(keys.privateKey, 0, 32);
