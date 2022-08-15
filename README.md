@@ -13,7 +13,7 @@ console.log(user.secret); // 秘密にしないといけない秘密鍵
 // 電子署名付きバイナリを生成
 const bin = TrustData.encode(user, "test");
 
-// 受け取り側で検証可能
+// 受け取り側で検証可能 (改ざんがあれば例外発生)
 const res = TrustData.decode(bin);
 ```
 
