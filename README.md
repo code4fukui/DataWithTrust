@@ -19,7 +19,7 @@ const res = TrustData.decode(bin);
 console.log(res.body); // "test"
 ```
 
-## 送付先DIDを指定し、相手ユーザのみ複合できる暗号化された信頼できるデータ連携
+## 指定ユーザのみ複合できる、暗号化された信頼できるデータ連携
 
 ```js
 import { TrustData } from "https://code4fukui.github.io/TrustData/TrustData.js";
@@ -41,7 +41,7 @@ const res = TrustData.decode(bin);
 console.log(res.body);
 ```
 
-## 前回データを含んだ電子署名による信頼できるデータ更新
+## 更新前データを含んだ電子署名による信頼できるデータ更新の実装例
 
 ```js
 import { TrustData } from "https://code4fukui.github.io/TrustData/TrustData.js";
