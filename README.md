@@ -17,7 +17,7 @@ const bin = TrustData.encode("test", user);
 
 // 受け取り側で検証可能 (改竄があれば例外発生)
 const res = TrustData.decode(bin);
-console.log(res.body); // "test"
+console.log(res.payload); // "test"
 ```
 
 ## 指定ユーザのみ複合できる、暗号化された信頼できるデータ連携
@@ -30,7 +30,7 @@ const bin = TrustData.encode("test", user1, user2.did); // 相手のDIDで暗号
 
 // ユーザ2
 const bin2 = TrustData.decode(bin, user2); // 自分の鍵で復号化
-console.log(bin2.body); // "test"
+console.log(bin2.payload); // "test"
 ```
 
 ## 任意のデータを入れることが可能
@@ -39,7 +39,7 @@ console.log(bin2.body); // "test"
 const json = { abc: "ABC", num: 5858858, bin: new Uint8Array([1, 2, 3])};
 const bin = TrustData.encode(json, user);
 const res = TrustData.decode(bin);
-console.log(res.body);
+console.log(res.payload);
 ```
 
 ## 更新前データを含んだ電子署名による信頼できるデータ更新の実装例
@@ -55,6 +55,6 @@ const bin2 = TrustData.encode(["test2", bin1], user2);
 
 // 検証
 const res2 = TrustData.decode(bin2);
-const res1 = TrustData.decode(res2.body[1]);
-console.log(res1.body); // "test1"
+const res1 = TrustData.decode(res2.payload[1]);
+console.log(res1.payload); // "test1"
 ```

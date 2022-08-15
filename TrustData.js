@@ -15,11 +15,11 @@ export class TrustData {
   }
 
   static VERSION_ED25519_2 = 1; // 0.2.0
-  static encode(body, user, todid = null) {
+  static encode(payload, user, todid = null) {
     if (!user) {
       throw new Error("must set user");
     }
-    const message = CBOR.encode([TAI64N.now(), body]);
+    const message = CBOR.encode([TAI64N.now(), payload]);
     const fromdid = user.did;
     const crypt = todid ? TrustData._encrypt(user, todid, message) : null;
     const res = CBOR.encode([
@@ -45,8 +45,8 @@ export class TrustData {
     if (!chk) {
       throw new Error("illegal signature");
     }
-    const [datetime, body] = CBOR.decode(message);
-    return { did: publicKey, datetime: TAI64N.toDate(datetime), body };
+    const [datetime, payload] = CBOR.decode(message);
+    return { did: publicKey, datetime: TAI64N.toDate(datetime), payload };
   }
 
   static _encrypt(user, did, bin) {
