@@ -6,7 +6,7 @@
 
 ```js
 // ユーザー作成 (DIDとシークレット)
-const user = TrustData.makeUser();
+const user = TrustData.createUser();
 console.log(user.did); // 公開してOK！ DID = 分散型ID = 公開鍵
 console.log(user.secret); // 秘密にしないといけない秘密鍵
 
