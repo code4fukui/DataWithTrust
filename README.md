@@ -21,7 +21,7 @@ const res = TrustData.decode(bin);
 console.log(res.payload); // "test"
 ```
 
-## 指定ユーザのみ複合化できる、暗号化された信頼性のあるデータ流通
+## 指定ユーザのみ読める、暗号化された信頼性のあるデータ流通
 
 ```js
 import { TrustData } from "https://code4fukui.github.io/DataWithTrust/TrustData.js";
@@ -37,7 +37,7 @@ console.log(bin2.payload); // "test"
 ## 任意のデータを入れることが可能
 
 ```js
-const json = { abc: "ABC", num: 5858858, bin: new Uint8Array([1, 2, 3])};
+const json = { abc: "ABC", num: 123456, bin: new Uint8Array([1, 2, 3])};
 const bin = TrustData.encode(json, user);
 const res = TrustData.decode(bin);
 console.log(res.payload);
