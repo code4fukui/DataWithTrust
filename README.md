@@ -59,3 +59,7 @@ const res2 = TrustData.decode(bin2);
 const res1 = TrustData.decode(res2.payload[1]);
 console.log(res1.payload); // "test1"
 ```
+
+## LICENSE
+
+[MIT License](LICENSE)
