@@ -7,7 +7,7 @@
 ## 電子署名による信頼性のあるデータ流通
 
 ```js
-import { TrustData } from "https://code4fukui.github.io/TrustData/TrustData.js";
+import { TrustData } from "https://code4fukui.github.io/DataWithTrust/TrustData.js";
 // ユーザー作成 (DIDとシークレット)
 const user = TrustData.createUser();
 console.log(user.did); // 公開してOK！ DID = 分散型ID = 公開鍵
@@ -24,7 +24,7 @@ console.log(res.payload); // "test"
 ## 指定ユーザのみ複合化できる、暗号化された信頼性のあるデータ流通
 
 ```js
-import { TrustData } from "https://code4fukui.github.io/TrustData/TrustData.js";
+import { TrustData } from "https://code4fukui.github.io/DataWithTrust/TrustData.js";
 const user1 = TrustData.createUser();
 const user2 = TrustData.createUser();
 const bin = TrustData.encode("test", user1, user2.did); // 相手のDIDで暗号化
@@ -46,7 +46,7 @@ console.log(res.payload);
 ## 更新前データを含んだ信頼性のあるデータ更新の実装例
 
 ```js
-import { TrustData } from "https://code4fukui.github.io/TrustData/TrustData.js";
+import { TrustData } from "https://code4fukui.github.io/DataWithTrust/TrustData.js";
 // ユーザ1による作成
 const user1 = TrustData.createUser();
 const bin1 = TrustData.encode("test1", user1);
