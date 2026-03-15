@@ -1,5 +1,7 @@
 # DataWithTrust - TrustData.js for DFFT
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 A simple JavaScript ES module for DataWithTrust / DFFT (Decentralized and Fair Data Flow Transaction).
 
 ## Features
