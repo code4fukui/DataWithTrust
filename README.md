@@ -68,4 +68,4 @@ console.log(res1.payload); // "test1"
 ```
 
 ## License
-[MIT License](LICENSE)
+MIT License — see [LICENSE](LICENSE).

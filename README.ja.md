@@ -1,6 +1,6 @@
 # DataWithTrust - TrustData.js for DFFT
 
-DataWithTrustは、信頼できるデータ転送を実現するためのシンプルなJavaScript ESモジュールです。主な機能は以下の通りです。
+DataWithTrustは、信頼できるデータ転送を実現するためのシンプルなJavaScript ESモジュールです。
 
 ## 主な機能
 - デジタル署名による信頼できるデータ転送
